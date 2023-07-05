@@ -1,0 +1,213 @@
+/* SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* TOOLS */
+
+/* - fonts */
+$font-primary: "Karla", sans-serif;
+$font-bold: 700;
+/* - colors */
+$color-primary: hsl(179, 62%, 43%);
+$color-primary-light: hsl(179, 53%, 59%);
+$color-secondary: hsl(71, 73%, 54%);
+$color-page-background: hsl(204, 43%, 93%); /* background */
+$color-text-primary: hsl(218, 22%, 67%); /* copy text */
+$color-text-white: hsl(0, 0%, 100%);
+
+$layout-breakpoint-small: 768px;
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+/* ELEMENTS */
+
+body {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  color: $color-text-primary;
+  background-color: $color-page-background;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    height: auto;
+  }
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  line-height: 1.5;
+}
+
+/* OBJECTS */
+
+.card {
+  max-width: 650px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 5px hsla(218, 22%, 67%, 0.1);
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    margin: 5%;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px 5px hsla(178, 78%, 21%, 0.3);
+}
+
+section div:first-of-type {
+  border-radius: 0 0 0 8px;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    border-radius: 0;
+  }
+}
+
+section div:last-of-type {
+  border-radius: 0 0 8px 0;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+/* COMPONENTS */
+
+.card__header {
+  background-color: $color-text-white;
+  border-radius: 8px 8px 0 0;
+  padding: 4rem;
+}
+
+.card__body {
+  width: 100%;
+  display: flex;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    flex-direction: column;
+  }
+}
+
+.card__section {
+  width: 50%;
+  color: $color-text-white;
+  padding: 4rem;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    width: 100%;
+  }
+}
+
+.card__title {
+  font-size: 2.6rem;
+  font-weight: $font-bold;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.card__subtitle {
+  font-size: 2rem;
+  font-weight: $font-bold;
+  line-height: 1.3;
+  margin-bottom: 1.4rem;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.price__amount {
+  font-size: 3.5rem;
+  font-weight: $font-bold;
+}
+
+.price__caption {
+  color: hsla(0, 0%, 100%, 60%);
+}
+
+.card__actions {
+  display: flex;
+  margin-top: 2.8rem;
+}
+
+.card__list {
+  font-size: 1.4rem;
+  color: hsla(0, 0%, 100%, 70%);
+}
+
+/* UTILITIES */
+
+.button-secondary {
+  color: $color-text-white;
+  background-color: $color-secondary;
+
+  &:hover {
+    background-color: hsl(71, 91%, 37%);
+  }
+}
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-background-primary {
+  background-color: $color-primary;
+}
+
+.color-background-primary_light {
+  background-color: $color-primary-light;
+}
+
+.color-secondary {
+  color: $color-secondary;
+}
